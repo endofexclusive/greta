@@ -1,0 +1,88 @@
+[*]
+[*] GTKWave Analyzer v3.3.52 (w)1999-2013 BSI
+[*] Thu Nov 14 22:19:18 2013
+[*]
+[dumpfile] "/home/asdf/greta/hdl/sdram/simulation/tb_sdram.ghw"
+[dumpfile_mtime] "Thu Nov 14 22:18:26 2013"
+[dumpfile_size] 786463
+[savefile] "/home/asdf/greta/hdl/sdram/tb_sdram.gtkw"
+[timestart] 215454000000
+[size] 1132 1023
+[pos] 738 0
+*-29.087095 215987000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.tb_sdram.
+[treeopen] top.tb_sdram.dut.
+[treeopen] top.tb_sdram.dut.disk.
+[treeopen] top.tb_sdram.dut.fast.
+[sst_width] 204
+[signals_width] 286
+[sst_expanded] 1
+[sst_vpaned_height] 307
+@200
+-CONTROL
+@28
+top.tb_sdram.dut.reset
+top.tb_sdram.dut.clk
+@200
+-INTERNAL
+@28
+top.tb_sdram.dut.state
+top.tb_sdram.dut.refresh
+@22
+#{top.tb_sdram.dut.wdata[15:0]} top.tb_sdram.dut.wdata[15] top.tb_sdram.dut.wdata[14] top.tb_sdram.dut.wdata[13] top.tb_sdram.dut.wdata[12] top.tb_sdram.dut.wdata[11] top.tb_sdram.dut.wdata[10] top.tb_sdram.dut.wdata[9] top.tb_sdram.dut.wdata[8] top.tb_sdram.dut.wdata[7] top.tb_sdram.dut.wdata[6] top.tb_sdram.dut.wdata[5] top.tb_sdram.dut.wdata[4] top.tb_sdram.dut.wdata[3] top.tb_sdram.dut.wdata[2] top.tb_sdram.dut.wdata[1] top.tb_sdram.dut.wdata[0]
+@28
+#{top.tb_sdram.dut.acks_pend[1:0]} top.tb_sdram.dut.acks_pend[1] top.tb_sdram.dut.acks_pend[0]
+#{top.tb_sdram.dut.acks[1:0]} top.tb_sdram.dut.acks[1] top.tb_sdram.dut.acks[0]
+#{top.tb_sdram.dut.nwe[1:0]} top.tb_sdram.dut.nwe[1] top.tb_sdram.dut.nwe[0]
+@22
+#{top.tb_sdram.dut.addr[23:1]} top.tb_sdram.dut.addr[23] top.tb_sdram.dut.addr[22] top.tb_sdram.dut.addr[21] top.tb_sdram.dut.addr[20] top.tb_sdram.dut.addr[19] top.tb_sdram.dut.addr[18] top.tb_sdram.dut.addr[17] top.tb_sdram.dut.addr[16] top.tb_sdram.dut.addr[15] top.tb_sdram.dut.addr[14] top.tb_sdram.dut.addr[13] top.tb_sdram.dut.addr[12] top.tb_sdram.dut.addr[11] top.tb_sdram.dut.addr[10] top.tb_sdram.dut.addr[9] top.tb_sdram.dut.addr[8] top.tb_sdram.dut.addr[7] top.tb_sdram.dut.addr[6] top.tb_sdram.dut.addr[5] top.tb_sdram.dut.addr[4] top.tb_sdram.dut.addr[3] top.tb_sdram.dut.addr[2] top.tb_sdram.dut.addr[1]
+@28
+#{top.tb_sdram.dut.offset[1:0]} top.tb_sdram.dut.offset[1] top.tb_sdram.dut.offset[0]
+@22
+#{top.tb_sdram.dut.tick[3:0]} top.tb_sdram.dut.tick[3] top.tb_sdram.dut.tick[2] top.tb_sdram.dut.tick[1] top.tb_sdram.dut.tick[0]
+#{top.tb_sdram.dut.init_counter[14:0]} top.tb_sdram.dut.init_counter[14] top.tb_sdram.dut.init_counter[13] top.tb_sdram.dut.init_counter[12] top.tb_sdram.dut.init_counter[11] top.tb_sdram.dut.init_counter[10] top.tb_sdram.dut.init_counter[9] top.tb_sdram.dut.init_counter[8] top.tb_sdram.dut.init_counter[7] top.tb_sdram.dut.init_counter[6] top.tb_sdram.dut.init_counter[5] top.tb_sdram.dut.init_counter[4] top.tb_sdram.dut.init_counter[3] top.tb_sdram.dut.init_counter[2] top.tb_sdram.dut.init_counter[1] top.tb_sdram.dut.init_counter[0]
+@200
+-I/O
+@22
+#{top.tb_sdram.dut.rdata[15:0]} top.tb_sdram.dut.rdata[15] top.tb_sdram.dut.rdata[14] top.tb_sdram.dut.rdata[13] top.tb_sdram.dut.rdata[12] top.tb_sdram.dut.rdata[11] top.tb_sdram.dut.rdata[10] top.tb_sdram.dut.rdata[9] top.tb_sdram.dut.rdata[8] top.tb_sdram.dut.rdata[7] top.tb_sdram.dut.rdata[6] top.tb_sdram.dut.rdata[5] top.tb_sdram.dut.rdata[4] top.tb_sdram.dut.rdata[3] top.tb_sdram.dut.rdata[2] top.tb_sdram.dut.rdata[1] top.tb_sdram.dut.rdata[0]
+@200
+-fast
+@28
+top.tb_sdram.dut.fast.req
+@22
+#{top.tb_sdram.dut.fast.wdata[15:0]} top.tb_sdram.dut.fast.wdata[15] top.tb_sdram.dut.fast.wdata[14] top.tb_sdram.dut.fast.wdata[13] top.tb_sdram.dut.fast.wdata[12] top.tb_sdram.dut.fast.wdata[11] top.tb_sdram.dut.fast.wdata[10] top.tb_sdram.dut.fast.wdata[9] top.tb_sdram.dut.fast.wdata[8] top.tb_sdram.dut.fast.wdata[7] top.tb_sdram.dut.fast.wdata[6] top.tb_sdram.dut.fast.wdata[5] top.tb_sdram.dut.fast.wdata[4] top.tb_sdram.dut.fast.wdata[3] top.tb_sdram.dut.fast.wdata[2] top.tb_sdram.dut.fast.wdata[1] top.tb_sdram.dut.fast.wdata[0]
+@2
+#{top.tb_sdram.dut.fast.addr[23:1]} top.tb_sdram.dut.fast.addr[23] top.tb_sdram.dut.fast.addr[22] top.tb_sdram.dut.fast.addr[21] top.tb_sdram.dut.fast.addr[20] top.tb_sdram.dut.fast.addr[19] top.tb_sdram.dut.fast.addr[18] top.tb_sdram.dut.fast.addr[17] top.tb_sdram.dut.fast.addr[16] top.tb_sdram.dut.fast.addr[15] top.tb_sdram.dut.fast.addr[14] top.tb_sdram.dut.fast.addr[13] top.tb_sdram.dut.fast.addr[12] top.tb_sdram.dut.fast.addr[11] top.tb_sdram.dut.fast.addr[10] top.tb_sdram.dut.fast.addr[9] top.tb_sdram.dut.fast.addr[8] top.tb_sdram.dut.fast.addr[7] top.tb_sdram.dut.fast.addr[6] top.tb_sdram.dut.fast.addr[5] top.tb_sdram.dut.fast.addr[4] top.tb_sdram.dut.fast.addr[3] top.tb_sdram.dut.fast.addr[2] top.tb_sdram.dut.fast.addr[1]
+@28
+#{top.tb_sdram.dut.fast.nwe[1:0]} top.tb_sdram.dut.fast.nwe[1] top.tb_sdram.dut.fast.nwe[0]
+top.tb_sdram.dut.fast_ack
+@200
+-disk
+@28
+top.tb_sdram.dut.disk.req
+@22
+#{top.tb_sdram.dut.disk.wdata[15:0]} top.tb_sdram.dut.disk.wdata[15] top.tb_sdram.dut.disk.wdata[14] top.tb_sdram.dut.disk.wdata[13] top.tb_sdram.dut.disk.wdata[12] top.tb_sdram.dut.disk.wdata[11] top.tb_sdram.dut.disk.wdata[10] top.tb_sdram.dut.disk.wdata[9] top.tb_sdram.dut.disk.wdata[8] top.tb_sdram.dut.disk.wdata[7] top.tb_sdram.dut.disk.wdata[6] top.tb_sdram.dut.disk.wdata[5] top.tb_sdram.dut.disk.wdata[4] top.tb_sdram.dut.disk.wdata[3] top.tb_sdram.dut.disk.wdata[2] top.tb_sdram.dut.disk.wdata[1] top.tb_sdram.dut.disk.wdata[0]
+@2
+#{top.tb_sdram.dut.disk.addr[23:1]} top.tb_sdram.dut.disk.addr[23] top.tb_sdram.dut.disk.addr[22] top.tb_sdram.dut.disk.addr[21] top.tb_sdram.dut.disk.addr[20] top.tb_sdram.dut.disk.addr[19] top.tb_sdram.dut.disk.addr[18] top.tb_sdram.dut.disk.addr[17] top.tb_sdram.dut.disk.addr[16] top.tb_sdram.dut.disk.addr[15] top.tb_sdram.dut.disk.addr[14] top.tb_sdram.dut.disk.addr[13] top.tb_sdram.dut.disk.addr[12] top.tb_sdram.dut.disk.addr[11] top.tb_sdram.dut.disk.addr[10] top.tb_sdram.dut.disk.addr[9] top.tb_sdram.dut.disk.addr[8] top.tb_sdram.dut.disk.addr[7] top.tb_sdram.dut.disk.addr[6] top.tb_sdram.dut.disk.addr[5] top.tb_sdram.dut.disk.addr[4] top.tb_sdram.dut.disk.addr[3] top.tb_sdram.dut.disk.addr[2] top.tb_sdram.dut.disk.addr[1]
+@29
+#{top.tb_sdram.dut.disk.nwe[1:0]} top.tb_sdram.dut.disk.nwe[1] top.tb_sdram.dut.disk.nwe[0]
+@28
+top.tb_sdram.dut.disk_ack
+@200
+-SDRAM
+@28
+top.tb_sdram.dut.sdram_cke
+top.tb_sdram.dut.sdram_clk
+top.tb_sdram.dut.sdram_nras
+top.tb_sdram.dut.sdram_ncas
+top.tb_sdram.dut.sdram_nwe
+#{top.tb_sdram.dut.sdram_ba[1:0]} top.tb_sdram.dut.sdram_ba[1] top.tb_sdram.dut.sdram_ba[0]
+@22
+#{top.tb_sdram.dut.sdram_a[11:0]} top.tb_sdram.dut.sdram_a[11] top.tb_sdram.dut.sdram_a[10] top.tb_sdram.dut.sdram_a[9] top.tb_sdram.dut.sdram_a[8] top.tb_sdram.dut.sdram_a[7] top.tb_sdram.dut.sdram_a[6] top.tb_sdram.dut.sdram_a[5] top.tb_sdram.dut.sdram_a[4] top.tb_sdram.dut.sdram_a[3] top.tb_sdram.dut.sdram_a[2] top.tb_sdram.dut.sdram_a[1] top.tb_sdram.dut.sdram_a[0]
+#{top.tb_sdram.dut.sdram_dq[15:0]} top.tb_sdram.dut.sdram_dq[15] top.tb_sdram.dut.sdram_dq[14] top.tb_sdram.dut.sdram_dq[13] top.tb_sdram.dut.sdram_dq[12] top.tb_sdram.dut.sdram_dq[11] top.tb_sdram.dut.sdram_dq[10] top.tb_sdram.dut.sdram_dq[9] top.tb_sdram.dut.sdram_dq[8] top.tb_sdram.dut.sdram_dq[7] top.tb_sdram.dut.sdram_dq[6] top.tb_sdram.dut.sdram_dq[5] top.tb_sdram.dut.sdram_dq[4] top.tb_sdram.dut.sdram_dq[3] top.tb_sdram.dut.sdram_dq[2] top.tb_sdram.dut.sdram_dq[1] top.tb_sdram.dut.sdram_dq[0]
+@28
+top.tb_sdram.dut.sdram_ldqm
+top.tb_sdram.dut.sdram_udqm
+[pattern_trace] 1
+[pattern_trace] 0

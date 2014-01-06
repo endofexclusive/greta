@@ -1,0 +1,70 @@
+[*]
+[*] GTKWave Analyzer v3.3.52 (w)1999-2013 BSI
+[*] Tue Nov 19 20:07:35 2013
+[*]
+[dumpfile] "/home/asdf/greta/hdl/bus_interface/simulation/tb_bus_interface.ghw"
+[dumpfile_mtime] "Tue Nov 19 20:03:19 2013"
+[dumpfile_size] 1993849
+[savefile] "/home/asdf/greta/hdl/bus_interface/tb_bus_interface.gtkw"
+[timestart] 72847000000
+[size] 1871 1027
+[pos] -1 -1
+*-29.436581 73953750000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.tb_bus_interface.
+[treeopen] top.tb_bus_interface.dut.
+[sst_width] 204
+[signals_width] 216
+[sst_expanded] 1
+[sst_vpaned_height] 307
+@200
+-bus_interface
+@28
+top.tb_bus_interface.dut.clk
+top.tb_bus_interface.dut.cpu_reset
+top.tb_bus_interface.dut.req
+#{top.tb_bus_interface.dut.nwe[1:0]} top.tb_bus_interface.dut.nwe[1] top.tb_bus_interface.dut.nwe[0]
+@2
+#{top.tb_bus_interface.dut.addr[23:1]} top.tb_bus_interface.dut.addr[23] top.tb_bus_interface.dut.addr[22] top.tb_bus_interface.dut.addr[21] top.tb_bus_interface.dut.addr[20] top.tb_bus_interface.dut.addr[19] top.tb_bus_interface.dut.addr[18] top.tb_bus_interface.dut.addr[17] top.tb_bus_interface.dut.addr[16] top.tb_bus_interface.dut.addr[15] top.tb_bus_interface.dut.addr[14] top.tb_bus_interface.dut.addr[13] top.tb_bus_interface.dut.addr[12] top.tb_bus_interface.dut.addr[11] top.tb_bus_interface.dut.addr[10] top.tb_bus_interface.dut.addr[9] top.tb_bus_interface.dut.addr[8] top.tb_bus_interface.dut.addr[7] top.tb_bus_interface.dut.addr[6] top.tb_bus_interface.dut.addr[5] top.tb_bus_interface.dut.addr[4] top.tb_bus_interface.dut.addr[3] top.tb_bus_interface.dut.addr[2] top.tb_bus_interface.dut.addr[1]
+@22
+#{top.tb_bus_interface.dut.wdata[15:0]} top.tb_bus_interface.dut.wdata[15] top.tb_bus_interface.dut.wdata[14] top.tb_bus_interface.dut.wdata[13] top.tb_bus_interface.dut.wdata[12] top.tb_bus_interface.dut.wdata[11] top.tb_bus_interface.dut.wdata[10] top.tb_bus_interface.dut.wdata[9] top.tb_bus_interface.dut.wdata[8] top.tb_bus_interface.dut.wdata[7] top.tb_bus_interface.dut.wdata[6] top.tb_bus_interface.dut.wdata[5] top.tb_bus_interface.dut.wdata[4] top.tb_bus_interface.dut.wdata[3] top.tb_bus_interface.dut.wdata[2] top.tb_bus_interface.dut.wdata[1] top.tb_bus_interface.dut.wdata[0]
+#{top.tb_bus_interface.dut.rdata[15:0]} top.tb_bus_interface.dut.rdata[15] top.tb_bus_interface.dut.rdata[14] top.tb_bus_interface.dut.rdata[13] top.tb_bus_interface.dut.rdata[12] top.tb_bus_interface.dut.rdata[11] top.tb_bus_interface.dut.rdata[10] top.tb_bus_interface.dut.rdata[9] top.tb_bus_interface.dut.rdata[8] top.tb_bus_interface.dut.rdata[7] top.tb_bus_interface.dut.rdata[6] top.tb_bus_interface.dut.rdata[5] top.tb_bus_interface.dut.rdata[4] top.tb_bus_interface.dut.rdata[3] top.tb_bus_interface.dut.rdata[2] top.tb_bus_interface.dut.rdata[1] top.tb_bus_interface.dut.rdata[0]
+@28
+top.tb_bus_interface.dut.nrst
+top.tb_bus_interface.dut.nas
+top.tb_bus_interface.dut.nuds
+top.tb_bus_interface.dut.nlds
+top.tb_bus_interface.dut.rnw
+top.tb_bus_interface.dut.cdac
+top.tb_bus_interface.dut.novr
+top.tb_bus_interface.dut.nint2
+top.tb_bus_interface.dut.nint6
+top.tb_bus_interface.dut.nint7
+top.tb_bus_interface.dut.ndtack
+@2
+#{top.tb_bus_interface.dut.a[23:1]} top.tb_bus_interface.dut.a[23] top.tb_bus_interface.dut.a[22] top.tb_bus_interface.dut.a[21] top.tb_bus_interface.dut.a[20] top.tb_bus_interface.dut.a[19] top.tb_bus_interface.dut.a[18] top.tb_bus_interface.dut.a[17] top.tb_bus_interface.dut.a[16] top.tb_bus_interface.dut.a[15] top.tb_bus_interface.dut.a[14] top.tb_bus_interface.dut.a[13] top.tb_bus_interface.dut.a[12] top.tb_bus_interface.dut.a[11] top.tb_bus_interface.dut.a[10] top.tb_bus_interface.dut.a[9] top.tb_bus_interface.dut.a[8] top.tb_bus_interface.dut.a[7] top.tb_bus_interface.dut.a[6] top.tb_bus_interface.dut.a[5] top.tb_bus_interface.dut.a[4] top.tb_bus_interface.dut.a[3] top.tb_bus_interface.dut.a[2] top.tb_bus_interface.dut.a[1]
+@23
+#{top.tb_bus_interface.dut.d[15:0]} top.tb_bus_interface.dut.d[15] top.tb_bus_interface.dut.d[14] top.tb_bus_interface.dut.d[13] top.tb_bus_interface.dut.d[12] top.tb_bus_interface.dut.d[11] top.tb_bus_interface.dut.d[10] top.tb_bus_interface.dut.d[9] top.tb_bus_interface.dut.d[8] top.tb_bus_interface.dut.d[7] top.tb_bus_interface.dut.d[6] top.tb_bus_interface.dut.d[5] top.tb_bus_interface.dut.d[4] top.tb_bus_interface.dut.d[3] top.tb_bus_interface.dut.d[2] top.tb_bus_interface.dut.d[1] top.tb_bus_interface.dut.d[0]
+@28
+top.tb_bus_interface.dut.d_noe
+top.tb_bus_interface.dut.d_to_greta
+@200
+-
+-bus_bfm
+@28
+top.tb_bus_interface.bus0.novr
+top.tb_bus_interface.bus0.nrst
+top.tb_bus_interface.bus0.nas
+top.tb_bus_interface.bus0.nuds
+top.tb_bus_interface.bus0.nlds
+top.tb_bus_interface.bus0.rnw
+top.tb_bus_interface.bus0.ndtack
+top.tb_bus_interface.bus0.nint2
+top.tb_bus_interface.bus0.nint6
+top.tb_bus_interface.bus0.nint7
+@2
+#{top.tb_bus_interface.bus0.a[23:1]} top.tb_bus_interface.bus0.a[23] top.tb_bus_interface.bus0.a[22] top.tb_bus_interface.bus0.a[21] top.tb_bus_interface.bus0.a[20] top.tb_bus_interface.bus0.a[19] top.tb_bus_interface.bus0.a[18] top.tb_bus_interface.bus0.a[17] top.tb_bus_interface.bus0.a[16] top.tb_bus_interface.bus0.a[15] top.tb_bus_interface.bus0.a[14] top.tb_bus_interface.bus0.a[13] top.tb_bus_interface.bus0.a[12] top.tb_bus_interface.bus0.a[11] top.tb_bus_interface.bus0.a[10] top.tb_bus_interface.bus0.a[9] top.tb_bus_interface.bus0.a[8] top.tb_bus_interface.bus0.a[7] top.tb_bus_interface.bus0.a[6] top.tb_bus_interface.bus0.a[5] top.tb_bus_interface.bus0.a[4] top.tb_bus_interface.bus0.a[3] top.tb_bus_interface.bus0.a[2] top.tb_bus_interface.bus0.a[1]
+@22
+#{top.tb_bus_interface.bus0.d[15:0]} top.tb_bus_interface.bus0.d[15] top.tb_bus_interface.bus0.d[14] top.tb_bus_interface.bus0.d[13] top.tb_bus_interface.bus0.d[12] top.tb_bus_interface.bus0.d[11] top.tb_bus_interface.bus0.d[10] top.tb_bus_interface.bus0.d[9] top.tb_bus_interface.bus0.d[8] top.tb_bus_interface.bus0.d[7] top.tb_bus_interface.bus0.d[6] top.tb_bus_interface.bus0.d[5] top.tb_bus_interface.bus0.d[4] top.tb_bus_interface.bus0.d[3] top.tb_bus_interface.bus0.d[2] top.tb_bus_interface.bus0.d[1] top.tb_bus_interface.bus0.d[0]
+[pattern_trace] 1
+[pattern_trace] 0

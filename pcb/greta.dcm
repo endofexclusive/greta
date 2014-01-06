@@ -1,0 +1,43 @@
+EESchema-DOCLIB  Version 2.0  Date: Mon 14 Oct 2013 07:45:12 PM CEST
+#
+$CMP 74LVCH162245A
+D 16-bit transceiver with direction pin; 30 ohm series termination resistor; 5V Input/Outputs tolerant (3-State); Bus hold on data inputs
+F /home/asdf/greta/datasheets/driver_bidir/74LVCH162245A.pdf
+$ENDCMP
+#
+$CMP A500_EXPANSION
+D Amiga 500 expansion connector
+F /home/asdf/greta/datasheets/amiga/Amiga_A500_A2000_Technical_Reference_Manual_1987.pdf
+$ENDCMP
+#
+$CMP CRYSTAL_OSCILLATOR
+D Crystal oscillator
+$ENDCMP
+#
+$CMP KSZ8031RNL
+D Ethernet PHY with RMII interface
+K phy
+$ENDCMP
+#
+$CMP MCP1824S-3302E
+D 500 mA 3.3V LDO Regulator
+K ldo
+F /home/asdf/greta/datasheets/voltage_regulators/3V3.pdf
+$ENDCMP
+#
+$CMP MCP1824ST-1202E
+D 300 mA 1.2V LDO Regulator
+K ldo
+F /home/asdf/greta/datasheets/voltage_regulators/1V2.pdf
+$ENDCMP
+#
+$CMP MICRO_SD
+D Micro SD Connector
+$ENDCMP
+#
+$CMP SW_PUSH
+D Push Button
+K Switch
+$ENDCMP
+#
+#End Doc Library

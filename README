@@ -1,0 +1,26 @@
+The GRETA expansion board for the Amiga 500 computer has SDRAM,
+microSD mass storage and Ethernet controllers. It is built on
+FPGA technology.
+
+The intended audience is any person who wants to learn more
+about how to develop hardware for the Amiga computer in general,
+and especially the one who wants to develop the GRETA expansion
+further.
+
+All schematics, PCB layout and VHDL code described in this
+document are released under the GNU General Public License,
+version 3. Gerber files are readily available and can be sent
+to a PCB manufacturer for production. Refer to the schematic
+files for bill of materials (BOM).
+
+As of January 2014, some features are still to be implemented
+in VHDL, namely microSD controller and Ethernet MAC,  as well
+as corresponding software device drivers on the Amiga.
+
+For a description of the design, se the file doc/greta.pdf.
+
+The original author is Martin Åberg. He can be contacted on
+electronic mail (remove spaces):
+
+m ar t in AT f ri p os t DOT o rg
+

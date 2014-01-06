@@ -1,0 +1,70 @@
+update=Sun 03 Nov 2013 07:59:21 PM CET
+version=1
+last_client=pcbnew
+[general]
+version=1
+[cvpcb]
+version=1
+NetIExt=net
+[eeschema]
+version=1
+LibDir=../pcb_kicad/library
+NetFmtName=
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=greta
+LibName2=power
+LibName3=device
+LibName4=transistors
+LibName5=conn
+LibName6=linear
+LibName7=regul
+LibName8=74xx
+LibName9=cmos4000
+LibName10=adc-dac
+LibName11=memory
+LibName12=xilinx
+LibName13=special
+LibName14=microcontrollers
+LibName15=dsp
+LibName16=microchip
+LibName17=analog_switches
+LibName18=motorola
+LibName19=texas
+LibName20=intel
+LibName21=audio
+LibName22=interface
+LibName23=digital-audio
+LibName24=philips
+LibName25=display
+LibName26=cypress
+LibName27=siliconi
+LibName28=opto
+LibName29=atmel
+LibName30=contrib
+LibName31=valves
+[pcbnew]
+version=1
+LastNetListRead=
+UseCmpFile=1
+PadDrill="    3.200000"
+PadDrillOvalY="    3.200000"
+PadSizeH="    4.000000"
+PadSizeV="    4.000000"
+PcbTextSizeV="    1.200000"
+PcbTextSizeH="    1.200000"
+PcbTextThickness="    0.120000"
+ModuleTextSizeV="    1.200000"
+ModuleTextSizeH="    1.200000"
+ModuleTextSizeThickness="    0.120000"
+SolderMaskClearance="    0.100000"
+SolderMaskMinWidth="    0.100000"
+DrawSegmentWidth="    0.120000"
+BoardOutlineThickness="    0.400000"
+ModuleOutlineThickness="    0.200000"
+[pcbnew/libraries]
+LibDir=
+LibName1=greta

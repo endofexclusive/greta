@@ -1,0 +1,61 @@
+[*]
+[*] GTKWave Analyzer v3.3.47 (w)1999-2013 BSI
+[*] Tue Nov 12 20:53:12 2013
+[*]
+[dumpfile] "/home/asdf/greta/hdl/fast/simulation/tb_fast.ghw"
+[dumpfile_mtime] "Tue Nov 12 20:47:17 2013"
+[dumpfile_size] 92242
+[savefile] "/home/asdf/greta/hdl/fast/tb_fast.gtkw"
+[timestart] 0
+[size] 1871 1027
+[pos] -1 -1
+*-32.608025 43860000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.tb_fast.
+[treeopen] top.tb_fast.dut.
+[treeopen] top.tb_fast.dut.ram.
+[sst_width] 204
+[signals_width] 280
+[sst_expanded] 1
+[sst_vpaned_height] 521
+@28
+top.tb_fast.dut.clk
+top.tb_fast.dut.reset
+top.tb_fast.dut.req
+#{top.tb_fast.dut.nwe[1:0]} top.tb_fast.dut.nwe[1] top.tb_fast.dut.nwe[0]
+top.tb_fast.dut.dev_select
+@2
+#{top.tb_fast.dut.addr[23:1]} top.tb_fast.dut.addr[23] top.tb_fast.dut.addr[22] top.tb_fast.dut.addr[21] top.tb_fast.dut.addr[20] top.tb_fast.dut.addr[19] top.tb_fast.dut.addr[18] top.tb_fast.dut.addr[17] top.tb_fast.dut.addr[16] top.tb_fast.dut.addr[15] top.tb_fast.dut.addr[14] top.tb_fast.dut.addr[13] top.tb_fast.dut.addr[12] top.tb_fast.dut.addr[11] top.tb_fast.dut.addr[10] top.tb_fast.dut.addr[9] top.tb_fast.dut.addr[8] top.tb_fast.dut.addr[7] top.tb_fast.dut.addr[6] top.tb_fast.dut.addr[5] top.tb_fast.dut.addr[4] top.tb_fast.dut.addr[3] top.tb_fast.dut.addr[2] top.tb_fast.dut.addr[1]
+@22
+#{top.tb_fast.dut.wdata[15:0]} top.tb_fast.dut.wdata[15] top.tb_fast.dut.wdata[14] top.tb_fast.dut.wdata[13] top.tb_fast.dut.wdata[12] top.tb_fast.dut.wdata[11] top.tb_fast.dut.wdata[10] top.tb_fast.dut.wdata[9] top.tb_fast.dut.wdata[8] top.tb_fast.dut.wdata[7] top.tb_fast.dut.wdata[6] top.tb_fast.dut.wdata[5] top.tb_fast.dut.wdata[4] top.tb_fast.dut.wdata[3] top.tb_fast.dut.wdata[2] top.tb_fast.dut.wdata[1] top.tb_fast.dut.wdata[0]
+#{top.tb_fast.dut.rdata[15:0]} top.tb_fast.dut.rdata[15] top.tb_fast.dut.rdata[14] top.tb_fast.dut.rdata[13] top.tb_fast.dut.rdata[12] top.tb_fast.dut.rdata[11] top.tb_fast.dut.rdata[10] top.tb_fast.dut.rdata[9] top.tb_fast.dut.rdata[8] top.tb_fast.dut.rdata[7] top.tb_fast.dut.rdata[6] top.tb_fast.dut.rdata[5] top.tb_fast.dut.rdata[4] top.tb_fast.dut.rdata[3] top.tb_fast.dut.rdata[2] top.tb_fast.dut.rdata[1] top.tb_fast.dut.rdata[0]
+@28
+top.tb_fast.dut.config_in
+top.tb_fast.dut.config_out
+@200
+-
+@28
+top.tb_fast.dut.ram_ack
+@22
+#{top.tb_fast.dut.ram_rdata[15:0]} top.tb_fast.dut.ram_rdata[15] top.tb_fast.dut.ram_rdata[14] top.tb_fast.dut.ram_rdata[13] top.tb_fast.dut.ram_rdata[12] top.tb_fast.dut.ram_rdata[11] top.tb_fast.dut.ram_rdata[10] top.tb_fast.dut.ram_rdata[9] top.tb_fast.dut.ram_rdata[8] top.tb_fast.dut.ram_rdata[7] top.tb_fast.dut.ram_rdata[6] top.tb_fast.dut.ram_rdata[5] top.tb_fast.dut.ram_rdata[4] top.tb_fast.dut.ram_rdata[3] top.tb_fast.dut.ram_rdata[2] top.tb_fast.dut.ram_rdata[1] top.tb_fast.dut.ram_rdata[0]
+@200
+-
+@28
+top.tb_fast.dut.dev_select_reg
+top.tb_fast.dut.addr_fast_ram
+top.tb_fast.dut.addr_autoconfig0
+top.tb_fast.dut.state
+@2
+#{top.tb_fast.dut.addr_low7[7:0]} top.tb_fast.dut.addr_low7[7] top.tb_fast.dut.addr_low7[6] top.tb_fast.dut.addr_low7[5] top.tb_fast.dut.addr_low7[4] top.tb_fast.dut.addr_low7[3] top.tb_fast.dut.addr_low7[2] top.tb_fast.dut.addr_low7[1] top.tb_fast.dut.addr_low7[0]
+@22
+#{top.tb_fast.dut.rdata_reg[15:0]} top.tb_fast.dut.rdata_reg[15] top.tb_fast.dut.rdata_reg[14] top.tb_fast.dut.rdata_reg[13] top.tb_fast.dut.rdata_reg[12] top.tb_fast.dut.rdata_reg[11] top.tb_fast.dut.rdata_reg[10] top.tb_fast.dut.rdata_reg[9] top.tb_fast.dut.rdata_reg[8] top.tb_fast.dut.rdata_reg[7] top.tb_fast.dut.rdata_reg[6] top.tb_fast.dut.rdata_reg[5] top.tb_fast.dut.rdata_reg[4] top.tb_fast.dut.rdata_reg[3] top.tb_fast.dut.rdata_reg[2] top.tb_fast.dut.rdata_reg[1] top.tb_fast.dut.rdata_reg[0]
+#{top.tb_fast.dut.rom_rdata[15:12]} top.tb_fast.dut.rom_rdata[15] top.tb_fast.dut.rom_rdata[14] top.tb_fast.dut.rom_rdata[13] top.tb_fast.dut.rom_rdata[12]
+@29
+top.tb_fast.dut.ram.req
+@28
+#{top.tb_fast.dut.ram.nwe[1:0]} top.tb_fast.dut.ram.nwe[1] top.tb_fast.dut.ram.nwe[0]
+@22
+#{top.tb_fast.dut.ram.addr[23:1]} top.tb_fast.dut.ram.addr[23] top.tb_fast.dut.ram.addr[22] top.tb_fast.dut.ram.addr[21] top.tb_fast.dut.ram.addr[20] top.tb_fast.dut.ram.addr[19] top.tb_fast.dut.ram.addr[18] top.tb_fast.dut.ram.addr[17] top.tb_fast.dut.ram.addr[16] top.tb_fast.dut.ram.addr[15] top.tb_fast.dut.ram.addr[14] top.tb_fast.dut.ram.addr[13] top.tb_fast.dut.ram.addr[12] top.tb_fast.dut.ram.addr[11] top.tb_fast.dut.ram.addr[10] top.tb_fast.dut.ram.addr[9] top.tb_fast.dut.ram.addr[8] top.tb_fast.dut.ram.addr[7] top.tb_fast.dut.ram.addr[6] top.tb_fast.dut.ram.addr[5] top.tb_fast.dut.ram.addr[4] top.tb_fast.dut.ram.addr[3] top.tb_fast.dut.ram.addr[2] top.tb_fast.dut.ram.addr[1]
+#{top.tb_fast.dut.ram.wdata[15:0]} top.tb_fast.dut.ram.wdata[15] top.tb_fast.dut.ram.wdata[14] top.tb_fast.dut.ram.wdata[13] top.tb_fast.dut.ram.wdata[12] top.tb_fast.dut.ram.wdata[11] top.tb_fast.dut.ram.wdata[10] top.tb_fast.dut.ram.wdata[9] top.tb_fast.dut.ram.wdata[8] top.tb_fast.dut.ram.wdata[7] top.tb_fast.dut.ram.wdata[6] top.tb_fast.dut.ram.wdata[5] top.tb_fast.dut.ram.wdata[4] top.tb_fast.dut.ram.wdata[3] top.tb_fast.dut.ram.wdata[2] top.tb_fast.dut.ram.wdata[1] top.tb_fast.dut.ram.wdata[0]
+[pattern_trace] 1
+[pattern_trace] 0

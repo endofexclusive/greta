@@ -1,0 +1,251 @@
+EESchema Schematic File Version 2
+LIBS:greta
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:greta-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 7
+Title "GRETA EXPANSION BOARD"
+Date "5 jan 2014"
+Rev "1"
+Comp "(C) Martin Åberg 2013"
+Comment1 "This schematic is licensed under the terms of GNU GPL version 3"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	6450 3850 6450 4050
+Wire Wire Line
+	6450 4050 6050 4050
+Wire Wire Line
+	6050 4350 7800 4350
+Wire Wire Line
+	6050 4150 6650 4150
+Connection ~ 4650 4450
+Wire Wire Line
+	4650 4450 4750 4450
+Connection ~ 4650 4550
+Wire Wire Line
+	4750 4250 4650 4250
+Wire Wire Line
+	4650 4250 4650 4750
+Wire Wire Line
+	4650 4650 4750 4650
+Wire Wire Line
+	7200 3250 7200 3350
+Wire Wire Line
+	6450 3250 6450 3350
+Wire Wire Line
+	7800 4350 7800 3850
+Wire Wire Line
+	6650 4150 6650 3850
+Wire Wire Line
+	7200 4250 7200 3850
+Wire Wire Line
+	6250 3350 6250 3250
+Wire Wire Line
+	6650 3350 6650 3250
+Wire Wire Line
+	7800 3350 7800 3250
+Wire Wire Line
+	4650 4550 4750 4550
+Connection ~ 4650 4650
+Wire Wire Line
+	4750 4350 4650 4350
+Connection ~ 4650 4350
+Wire Wire Line
+	4650 3850 4650 3950
+Wire Wire Line
+	4650 3950 4750 3950
+Wire Wire Line
+	6050 4250 7200 4250
+Wire Wire Line
+	6050 3950 6250 3950
+Wire Wire Line
+	6250 3950 6250 3850
+$Comp
+L +3.3V #PWR038
+U 1 1 52521924
+P 4650 3850
+F 0 "#PWR038" H 4650 3810 30  0001 C CNN
+F 1 "+3.3V" H 4650 3960 30  0000 C CNN
+F 2 "" H 4650 3850 60  0001 C CNN
+F 3 "" H 4650 3850 60  0001 C CNN
+	1    4650 3850
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4750 4050
+NoConn ~ 4750 4150
+$Comp
+L GND #PWR039
+U 1 1 52521907
+P 4650 4750
+F 0 "#PWR039" H 4650 4750 30  0001 C CNN
+F 1 "GND" H 4650 4680 30  0001 C CNN
+F 2 "" H 4650 4750 60  0001 C CNN
+F 3 "" H 4650 4750 60  0001 C CNN
+	1    4650 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR040
+U 1 1 525218EE
+P 7800 3250
+F 0 "#PWR040" H 7800 3210 30  0001 C CNN
+F 1 "+3.3V" H 7800 3360 30  0000 C CNN
+F 2 "" H 7800 3250 60  0001 C CNN
+F 3 "" H 7800 3250 60  0001 C CNN
+	1    7800 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR041
+U 1 1 525218EB
+P 7200 3250
+F 0 "#PWR041" H 7200 3210 30  0001 C CNN
+F 1 "+3.3V" H 7200 3360 30  0000 C CNN
+F 2 "" H 7200 3250 60  0001 C CNN
+F 3 "" H 7200 3250 60  0001 C CNN
+	1    7200 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR042
+U 1 1 525218EA
+P 6650 3250
+F 0 "#PWR042" H 6650 3210 30  0001 C CNN
+F 1 "+3.3V" H 6650 3360 30  0000 C CNN
+F 2 "" H 6650 3250 60  0001 C CNN
+F 3 "" H 6650 3250 60  0001 C CNN
+	1    6650 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR043
+U 1 1 525218E9
+P 6450 3250
+F 0 "#PWR043" H 6450 3210 30  0001 C CNN
+F 1 "+3.3V" H 6450 3360 30  0000 C CNN
+F 2 "" H 6450 3250 60  0001 C CNN
+F 3 "" H 6450 3250 60  0001 C CNN
+	1    6450 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR044
+U 1 1 525218E1
+P 6250 3250
+F 0 "#PWR044" H 6250 3210 30  0001 C CNN
+F 1 "+3.3V" H 6250 3360 30  0000 C CNN
+F 2 "" H 6250 3250 60  0001 C CNN
+F 3 "" H 6250 3250 60  0001 C CNN
+	1    6250 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R7
+U 1 1 525218C4
+P 7800 3600
+F 0 "R7" V 7880 3600 50  0000 C CNN
+F 1 "47K" V 7800 3600 50  0000 C CNN
+F 2 "" H 7800 3600 60  0001 C CNN
+F 3 "" H 7800 3600 60  0001 C CNN
+	1    7800 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 525218BB
+P 7200 3600
+F 0 "R6" V 7280 3600 50  0000 C CNN
+F 1 "47K" V 7200 3600 50  0000 C CNN
+F 2 "" H 7200 3600 60  0001 C CNN
+F 3 "" H 7200 3600 60  0001 C CNN
+	1    7200 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 525218B6
+P 6650 3600
+F 0 "R5" V 6730 3600 50  0000 C CNN
+F 1 "47K" V 6650 3600 50  0000 C CNN
+F 2 "" H 6650 3600 60  0001 C CNN
+F 3 "" H 6650 3600 60  0001 C CNN
+	1    6650 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 525218AB
+P 6450 3600
+F 0 "R4" V 6530 3600 50  0000 C CNN
+F 1 "47K" V 6450 3600 50  0000 C CNN
+F 2 "" H 6450 3600 60  0001 C CNN
+F 3 "" H 6450 3600 60  0001 C CNN
+	1    6450 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 525218A0
+P 6250 3600
+F 0 "R3" V 6330 3600 50  0000 C CNN
+F 1 "47K" V 6250 3600 50  0000 C CNN
+F 2 "" H 6250 3600 60  0001 C CNN
+F 3 "" H 6250 3600 60  0001 C CNN
+	1    6250 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L MICRO_SD X2
+U 1 1 5252188B
+P 5350 3800
+F 0 "X2" H 5700 2850 60  0000 C CNN
+F 1 "MICRO_SD" H 5350 3800 60  0000 C CNN
+F 2 "" H 5350 3800 60  0001 C CNN
+F 3 "" H 5350 3800 60  0001 C CNN
+	1    5350 3800
+	1    0    0    -1  
+$EndComp
+Text GLabel 6050 4450 2    60   Input ~ 0
+SD_CLK
+Text GLabel 7800 4350 2    60   Input ~ 0
+SD_DO
+Text GLabel 7200 4250 2    60   Input ~ 0
+SD_DI
+Text GLabel 6650 4150 2    60   Input ~ 0
+SD_nCS
+$EndSCHEMATC
