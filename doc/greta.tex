@@ -64,11 +64,11 @@ As of January 2014, some features are still to be implemented
 in VHDL as well as corresponding software device drivers on
 the Amiga.
 
-Be free to contact the original author at
+Feel free to contact the original author at
 \includegraphics[scale=0.8]{email.png}. Also feel free and
 welcome to develop this project further under the current
 license and report your progress to the author. Cheerful
-support and cooperation will be given. :-)
+support and cooperation will be provided. :-)
 
 \section{Background}
 The Amiga 500 computer, based on the Amiga platform, became
@@ -78,8 +78,8 @@ and a well-designed operating system. The Amiga platform
 was designed to be a basis for business, creative computing,
 video production, as well as pure game machines of its times.
 Hardware expandability and modularity was designed into the
-architecture from start. The auto-configuration protocol
-AUTOCONFIG is an example of this (more on this later).
+architecture from start. The auto-configuration protocol,
+AUTOCONFIG, is an example of this (more on this later).
 
 A set of on-board custom hardware chips were responsible
 for DMA-powered multimedia functionality including graphics,
@@ -137,7 +137,7 @@ fitting the appropriate controller chip which is directed by
 the FPGA chip.
 
 Also, with minor modification, the board can be made to fit
-the Zorro 2 bus in Amiga 2000/3000/4000. It could in principle
+the ZORRO II bus in Amiga 2000/3000/4000. It could in principle
 be achieved by modifying the physical connection and rerouting
 the AUTOCONFIG signals as appropriate.
 
@@ -171,8 +171,8 @@ capacitors.
 
 Figure \ref{mounted_components2} shows the PCB
 with components mounted and figure \ref{greta_connected2} the
-expansion board connected to the host computer. In figures
-\ref{greta_osh_top} \ref{greta_osh_bottom} are images rendered
+expansion board connected to the host computer. Figures
+\ref{greta_osh_top} and \ref{greta_osh_bottom} are images rendered
 from the Gerber files supplied to the PCB manufacturer.
 
 \begin{figure}
@@ -199,7 +199,7 @@ voltage regulators which generate 1.2V and 3.3V.}
 \centering
 \includegraphics[width=\textwidth]{greta_connected2.jpg}
 \caption{The expansion board connects on the left side of the
-computer. The big chip closest to the expansion is the Motorola
+computer. The large chip parallel to the expansion is the Motorola
 MC68000 CPU.}
 \label{greta_connected2}
 \end{figure}
@@ -260,19 +260,20 @@ of the GRETA hardware and HDL.
 \end{description}
 
 \chapter{HDL Overview}
-This chapter gives an overview of the HDL architecture for
-GRETA. All VHDL source files are presented in appendix \ref{hdl_code}.
-During the devolopment of the HDL components, a set of testbenches were
-developed. These are not included in the listings in this document. They
-are however provided in the GRETA file distribution.
+This chapter gives an overview of the GRETA HDL architecture.
+All VHDL source files are included in appendix \ref{hdl_code}.
+During the devolopment of the HDL components, a set of test
+benches were developed. These test benches are not included
+in the listings in this document. They are however provided
+in the GRETA file distribution.
 
 The top-level module is contained in \texttt{greta.vhdl}
 with the port definition described in table \ref{top_level}.
 The VHDL package in file \texttt{greta\_pkg.vhdl} contains
-type definitions, address definitions and bit definitions and
-helper functions for the other HDL modules. Even though several
-custom types are used in the design, the top level ports only
-use types defined in \texttt{IEEE.STD\_LOGIC\_1164}.
+type definitions, address constants, bit constants and helper
+functions for the other HDL modules. Even though several custom
+types are used in the design, the top level ports only use
+types defined in \texttt{IEEE.STD\_LOGIC\_1164}.
 
 Figure \ref{hdl_overview} illustrates how the HDL
 components are related to each other.
@@ -289,26 +290,26 @@ are realised in FPGA.}
 \begin{table}
 \begin{tabular}{*3l}    \toprule
 \emph{Port}             & \emph{Direction}  & \emph{Description} \\ \midrule
-\texttt{CLK25MHZ}       & in  & \texttt{JP1} open: undefined. \\
+\texttt{CLK25MHZ}       & in  & If \texttt{JP1} is open then this input is undefined. \\
 \midrule
 \midrule
-                            &     & Amiga 500 (Rock Lobster) expansion bus\\
+                            &     & Amiga 500 expansion bus\\
 \midrule
 \texttt{RL\_nRST}           & in  & Reset\\
 \texttt{RL\_nAS}            & in  & Address Strobe\\
 \texttt{RL\_nUDS}           & in  & Data Upper Strobe\\
 \texttt{RL\_nLDS}           & in  & Data Lower Strobe\\
 \texttt{RL\_RnW}            & in  & Read/Write\\
-\texttt{RL\_CDAC}           & in  & Amiga system clock with 90$^{\circ}$ phase.\\
-\texttt{RL\_nOVR}           & out & Override internal nDTAC generation\\
+\texttt{RL\_CDAC}           & in  & Amiga system clock with 90$^{\circ}$ phase offset\\
+\texttt{RL\_nOVR}           & out & Override internal generation of \texttt{nDTACK}\\
 \texttt{RL\_nINT2}          & out & Amiga interrupt level 2\\
-\texttt{RL\_nINT6}          & out & Amiga interrupt level 2\\
+\texttt{RL\_nINT6}          & out & Amiga interrupt level 6\\
 \texttt{RL\_nINT7}          & out & Non-maskable interrupt\\
 \texttt{RL\_nDTACK}         & out & Data Acknowledge\\
 \texttt{RL\_A[23:1]}        & in  & Address bus \\
-\texttt{RL\_D[15:0]}        & inout & Data bus \\
-\texttt{RL\_D\_nOE}         & out & Output enable for data bus transceiver. \\
-\texttt{RL\_D\_TO\_GRETA}   & out & Direction of data bus transceiver.\\
+\texttt{RL\_D[15:0]}        & inout & Bidirectinal data bus \\
+\texttt{RL\_D\_nOE}         & out & Output enable for data bus transceiver \\
+\texttt{RL\_D\_TO\_GRETA}   & out & Direction of data bus transceiver\\
 \midrule
 \midrule
                             &       & SDRAM interface \\
@@ -357,9 +358,9 @@ are realised in FPGA.}
 \label{top_level}
 \end{table}
 
-A clock synthesizer unit (DCM) in the FPGA is used to generate the
-133 MHz clock which is used in the internal logic. It is commonly refered
-to as the \texttt{clk} signal.
+A clock synthesizer unit (DCM) in the FPGA is used to generate
+the 133 MHz clock which is used in the internal logic. It is
+commonly referred to as the \texttt{clk} signal.
 
 \section{AUTOCONFIG}
 According to the AUTOCONFIG protocol of the Amiga computer
@@ -374,24 +375,26 @@ area and eventually issues a write to relocate the device
 to another address space, typically somewhere inside
 \texttt{\$E90000-\$EFFFFF} or \texttt{\$200000-\$9FFFFF}
 depending on size requirements. The device is now
-\texttt{CONFIGURED} and passes its \texttt{nCONFIG\_OUT}
-signal to the next device's \texttt{nCONFIG\_IN}.
+\texttt{CONFIGURED} and passes its \texttt{nCONFIG\_OUT} signal
+to the next device's \texttt{nCONFIG\_IN}. This procedure is
+repeated until all devices in the system are configured.
 
-If the system for some reason choses not to configure the
-device, the device is forced into the \texttt{SHUT\_UP} state
-by writing a certain register. In this state the device must
-never respond again until the next reset.
+If the system for some reason choses not to configure a device,
+the device is forced into the \texttt{SHUT\_UP} state by writing
+to a dedicated register. In this state the device just passes
+on its \texttt{nCONFIG\_OUT} and must never respond again
+until the next reset.
 
-The AUTOCONFIG space area is the address area from
+The AUTOCONFIG space is the address area from
 \texttt{\$E80000-\$EFFFFF}. Inside this area there are eight
 equaly sized slots.
 
-\texttt{autoconfig\_pkg}
-has definitions and helper functions for the AUTOCONFIG protocol.
+Definitions and helper functions for the AUTOCONFIG protocol
+can be found in the VHDL package \texttt{autoconfig\_pkg}.
 
 \chapter{Bus interface}
-The bus decoder is responsible for decoding the asynchronous
-68000 bus signals and exporting a synchronous read/write
+The bus decoder is responsible for decoding asynchronous
+MC68000 bus signals and exporting a synchronous read/write
 protocol to the GRETA peripherals.
 
 \section{Specification}
@@ -406,7 +409,7 @@ safe minimum.}.
 Each GRETA peripheral device holds its \texttt{rdata}
 output valid as long as the peripheral is addressed, and zero
 otherwise. This allows for all GRETA peripherals to have their
-rdata outputs OR-wired to the the bus interface \texttt{rdata}
+rdata outputs OR-wired to the bus interface \texttt{rdata}
 input. An addressed GRETA peripheral must respond to a read
 request in 34 \texttt{clk} periods\footnote{To be decided. This
 is a safe minimum.} by asserting its \texttt{dev\_select}
@@ -415,10 +418,10 @@ are OR:ed together at the top level. The bus interface
 \texttt{dev\_selected} is used to determine if the bus
 transceivers shall drive data towards the Amiga.
 
-The Amiga ZORRO II bus interface also defines the XRDY signal
-that can be used to delay bus accesses. This signal is not
-used in the GRETA design and is not even connected to the
-GRETA hardware.
+The Amiga ZORRO II expansion bus protocol also defines the
+signal \texttt{XRDY} which can be used to delay individual
+bus accesses. \texttt{XRDY} is not used in the GRETA design
+and is not even connected to the GRETA hardware.
 
 \begin{table}
 \begin{tabular}{*4l}    \toprule
@@ -444,10 +447,12 @@ GRETA hardware.
 \end{table}
 
 \section{Implementation}
-All input Rock Lobster signals are synchronized before use in
-the GRETA clock domain.  Control signals have two synchronizer
-stages while the data and address bus have one each. Also all
-inputs and outputs have their registers in the FPGA IO pads.
+All input signals from the Amiga expansion bus are synchronized
+before use in the GRETA clock domain. Control signals have two
+synchronizer stages. Stability of sampled data and address
+bus signals are assured by the control signals according to
+the MC68000 bus protocol. Furthermore, all inputs and outputs
+have their registers in the FPGA IO pads.
 
 \chapter{SDRAM Controller}
 The SDRAM controller offers a user interface to a physical
@@ -484,7 +489,7 @@ for this configuration.}
 \end{table}
 
 \subsection{Fast RAM Controller}
-For the Rock Lobster bus interface on an NTSC Amiga 500,
+For the ZORRO II bus interface on an NTSC Amiga 500,
 accesses can be performed at most once every fourth 7.16MHz
 clock cycle \cite{mc68000um}.  The bus read period and
 deadlines are derived from \cite{mc68000um} and actual signal
@@ -530,19 +535,19 @@ $2083 \le \frac{64 ms}{4096}\cdot \frac{1}{7.5 ns}$.
 
 \section{SDRAM Scheduling}
 To solve the SDRAM scheduling problem, a static off-line
-approach is taken.  A time table in which clients get their
-dedicated time slots is pre-calculated.  An offset pointer
-iterates over the calendar slots and loops when it reaches
-the end of the table.
+approach is used. A time table is pre-calculated, in which
+each client has its dedicated time slot. An offset pointer
+iterates over the calendar slots. When the pointer has reached
+the end of the table it restarts from the top again.
 
 This satisfies the goal of determinism and simplicity. Of
 course, it must be assured that each client will meet its deadline.
 
-To simplify matters, the accessed bank is always always
-precharged after an access. Furthermore, if a client does not
-issue a request in its designated time slot, the SDRAM will
-carry out an unused read operation anyway.  Note that
-self refreshes are scheduled just as an ordinary client.
+To simplify matters, the accessed bank is always precharged
+after an access. Furthermore, if a client does not issue a
+request in its designated time slot, the SDRAM will carry out
+an unused read operation anyway.  Note that self refreshes
+are scheduled just as an ordinary client.
 
 Also note that scheduling of requests to the SDRAM
 resource as presented in this section, will result in accesses
@@ -599,7 +604,7 @@ signal \texttt{nwe}.
 \emph{Member}   & \texttt{Type}         & \emph{Description} \\ \midrule
 \texttt{req}    & \texttt{std\_logic}   & Assert high to issue an SDRAM request. \\
 \texttt{nwe}    & \texttt{bus\_nwe}     & Upper and lower byte select for write.\\
-                &                       & "11" means read. \\
+                &                       & \texttt{"11"} means read. \\
 \texttt{addr}   & \texttt{bus\_addr}    & Target address for request. \\
 \texttt{wdata}  & \texttt{bus\_data}    & Write data. \\
 \bottomrule
