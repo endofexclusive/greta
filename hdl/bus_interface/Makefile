@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2013 Martin Åberg
+# Copyright (C) 2013, 2016 Martin Åberg
 #
 # This program is free software: you can redistribute it
 # and/or modify it under the terms of the GNU General Public
@@ -16,19 +15,22 @@
 # You should have received a copy of the GNU General
 # Public License along with this program.  If not, see
 # <http://www.gnu.org/licenses/>.
-#
-MODULE=disk
+
+HDLDIR=..
+MODULE=bus_interface
 PLATFORM=greta_board
 FPGA = xc3s50an-4-tqg144
 VHDLS = \
 	$(MODULE).vhdl \
-	../greta_pkg.vhdl \
+	$(HDLDIR)/greta_pkg.vhdl
 
-GHDL_FLAGS = --ieee=standard --std=93 --vital-checks --warn-binding \
-			 --warn-reserved --warn-library --warn-vital-generic \
-		     --warn-delayed-checks --warn-body --warn-specs --warn-unused \
-			 --workdir=simulation --work=work --mb-comments
+VHDLS_SIM = \
+	$(HDLDIR)/bus_bfm_pkg.vhdl \
+	$(HDLDIR)/bus_bfm.vhdl
+
 all: synthesis simulation
+
+include $(HDLDIR)/ghdl.mk
 
 synthesis: ${VHDLS}
 	mkdir -p synthesis
@@ -50,18 +52,7 @@ synthesis: ${VHDLS}
 	grep -d skip WARNINGS synthesis/* | grep -Eq "XST_NUMBER_OF_WARNINGS\" value=\"0\""
 	touch $@
 
-simulation: ${MODULE}.vhdl tb_${MODULE}.vhdl $(VHDLS)
-	mkdir -p simulation
-	ghdl -i ${GHDL_FLAGS} $(VHDLS) tb_${MODULE}.vhdl
-	ghdl -m ${GHDL_FLAGS} tb_${MODULE}
-	mv tb_${MODULE} simulation
-	./simulation/tb_${MODULE} --assert-level=error --wave=simulation/tb_${MODULE}.ghw
-	touch $@
-
-waves: simulation
-	gtkwave -a tb_${MODULE}.gtkw simulation/tb_${MODULE}.ghw
-
 .PHONY: clean
-clean:
-	rm -rf synthesis simulation
+clean: simulation-clean
+	rm -rf synthesis
 
