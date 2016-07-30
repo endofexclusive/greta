@@ -24,6 +24,9 @@ VHDLS = \
 	$(MODULE).vhdl \
 	$(HDLDIR)/greta_pkg.vhdl
 
+VHDLS_SIM = \
+	$(HDLDIR)/gbus_bfm_pkg.vhdl
+
 all: synthesis simulation
 
 include $(HDLDIR)/ghdl.mk

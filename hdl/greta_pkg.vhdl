@@ -1,5 +1,4 @@
---
--- Copyright (C) 2013 Martin Åberg
+-- Copyright (C) 2013, 2016 Martin Åberg
 --
 --  This program is free software: you can redistribute it
 --  and/or modify it under the terms of the GNU General Public
@@ -16,7 +15,7 @@
 --  You should have received a copy of the GNU General
 --  Public License along with this program.  If not, see
 --  <http://www.gnu.org/licenses/>.
---
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -54,6 +53,31 @@ package greta_pkg is
   constant WRITE_WORD   : bus_nwe := (UPPER => '0', LOWER => '0');
   constant READ_WORD    : bus_nwe := (UPPER => '1', LOWER => '1');
 
+  -- GRETA bus protocol
+  type gbus_in is record
+    reset       : std_logic;
+    req         : std_logic;
+    nwe         : bus_nwe;
+    addr        : bus_addr;
+    wdata       : bus_data;
+    config      : std_logic;
+  end record;
+  constant gbus_in_none : gbus_in := (
+    reset       => '1',
+    req         => '0',
+    nwe         => (others => 'U'),
+    addr        => (others => 'U'),
+    wdata       => (others => 'U'),
+    config      => '0'
+  );
+
+  type gbus_out is record
+    dev_select  : std_logic;
+    rdata       : bus_data;
+    config      : std_logic;
+  end record;
+
+  -- SDRAM controller protocol
   type ram_bus is
   record
     req    : std_logic;
@@ -89,6 +113,8 @@ package greta_pkg is
   -- like $F824.
   constant HACKER_MANUFACTURER  :
    std_logic_vector(15 downto 0) := x"07DB";
+
+  type expansionrom is array (0 to 63) of nibble;
 
   function is_autoconfig_reg(n : natural; a : bus_addr)
     return boolean;
