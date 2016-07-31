@@ -1,0 +1,4 @@
+**/*.o
+*/simulation
+*/synthesis
+
