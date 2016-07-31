@@ -93,6 +93,20 @@ package greta_pkg is
     wdata  : bus_data;
   end record;
 
+  -- SPI
+  type spi_in is
+  record
+    miso   : std_logic;
+  end record;
+
+  type spi_out is
+  record
+    clk    : std_logic;
+    -- active high
+    mosi   : std_logic;
+    ss     : std_logic;
+  end record;
+
   -- Note that use of the ec_BaseAddress register is
   -- tricky.  The system will actually write twice. First
   -- the low order nybble is written to the ec_BaseAddress
@@ -104,6 +118,7 @@ package greta_pkg is
 
   constant FAST_PRODUCT_NUMBER  : std_logic_vector := x"1";
   constant DISK_PRODUCT_NUMBER  : std_logic_vector := x"2";
+  constant ASPIC_PRODUCT_NUMBER : std_logic_vector := x"3";
   constant ERT_ZORROII          : nibble := "1100";
   constant ERT_MEMLIST          : nibble := "0010";
   constant ERT_DIAGVALID        : nibble := "0001";

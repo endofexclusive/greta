@@ -1,0 +1,61 @@
+name: ASPIC
+brief: SPI controller for GRETA
+regs:
+  - name:   cap
+    brief:  Capability register
+    width:  16
+    fields:
+      - name:   dma
+        brief:  DMA available (R)
+        pos:    0
+
+  - name:   status
+    brief:  Status register
+    width:  16
+    fields:
+      - name:   tip
+        brief:  Transfer in progress (R)
+        pos:    0
+      - name:   tc
+        brief:  Transfer complete (R, write '1' to clear)
+        pos:    1
+
+  - name:   ctrl
+    brief:  Control register
+    width:  16
+    fields:
+      - name:   ss
+        brief:  Slave select enable (RW)
+        pos:    0
+
+      - name:   tcim
+        brief:  Transfer complete interrupt mask (RW)
+        pos:    1
+
+  - name:   scaler
+    brief:  SPI clock scaler register
+    width:  16
+    fields:
+      - name:   reload
+        brief:  Scaler reload value (RW)
+        pos:    0
+        width:  16
+
+  - name:   txdata
+    brief:  SPI transmit data register
+    width:  16
+    fields:
+      - name:   txdata
+        brief:  Transmit data (RW)
+        pos:    0
+        width:  16
+
+  - name:   rxdata
+    brief:  SPI receive data register
+    width:  16
+    fields:
+      - name:   rxdata
+        brief:  Receive data (R)
+        pos:    0
+        width:  16
+

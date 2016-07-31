@@ -1,0 +1,6 @@
+Simulate with GHDL
+$ make simulation
+
+Inspect waveforms with gtkwave:
+$ make waves
+

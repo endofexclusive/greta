@@ -1,0 +1,84 @@
+[*]
+[*] GTKWave Analyzer v3.3.62 (w)1999-2014 BSI
+[*] Sun Jul 31 23:10:06 2016
+[*]
+[dumpfile] "/home/asdf/repos/greta/hdl/aspic/simulation/tb_aspic.ghw"
+[dumpfile_mtime] "Sun Jul 31 23:07:17 2016"
+[dumpfile_size] 274899
+[savefile] "/home/asdf/repos/greta/hdl/aspic/tb_aspic.gtkw"
+[timestart] 0
+[size] 1920 1080
+[pos] -1 -550
+*-34.087002 130863750000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.tb_aspic.
+[treeopen] top.tb_aspic.dut.
+[treeopen] top.tb_aspic.dut.gbi.
+[treeopen] top.tb_aspic.dut.r.
+[treeopen] top.tb_aspic.dut.r.user.
+[treeopen] top.tb_aspic.dut.r.user.rxdata.
+[treeopen] top.tb_aspic.dut.r.user.txdata.
+[sst_width] 210
+[signals_width] 193
+[sst_expanded] 1
+[sst_vpaned_height] 626
+@28
+top.tb_aspic.dut.clk
+@200
+-gbi
+@28
+top.tb_aspic.dut.gbi.reset
+top.tb_aspic.dut.gbi.req
+#{top.tb_aspic.dut.gbi.nwe[1:0]} top.tb_aspic.dut.gbi.nwe[1] top.tb_aspic.dut.gbi.nwe[0]
+@2
+#{top.tb_aspic.dut.gbi.addr[23:1]} top.tb_aspic.dut.gbi.addr[23] top.tb_aspic.dut.gbi.addr[22] top.tb_aspic.dut.gbi.addr[21] top.tb_aspic.dut.gbi.addr[20] top.tb_aspic.dut.gbi.addr[19] top.tb_aspic.dut.gbi.addr[18] top.tb_aspic.dut.gbi.addr[17] top.tb_aspic.dut.gbi.addr[16] top.tb_aspic.dut.gbi.addr[15] top.tb_aspic.dut.gbi.addr[14] top.tb_aspic.dut.gbi.addr[13] top.tb_aspic.dut.gbi.addr[12] top.tb_aspic.dut.gbi.addr[11] top.tb_aspic.dut.gbi.addr[10] top.tb_aspic.dut.gbi.addr[9] top.tb_aspic.dut.gbi.addr[8] top.tb_aspic.dut.gbi.addr[7] top.tb_aspic.dut.gbi.addr[6] top.tb_aspic.dut.gbi.addr[5] top.tb_aspic.dut.gbi.addr[4] top.tb_aspic.dut.gbi.addr[3] top.tb_aspic.dut.gbi.addr[2] top.tb_aspic.dut.gbi.addr[1]
+@22
+#{top.tb_aspic.dut.gbi.wdata[15:0]} top.tb_aspic.dut.gbi.wdata[15] top.tb_aspic.dut.gbi.wdata[14] top.tb_aspic.dut.gbi.wdata[13] top.tb_aspic.dut.gbi.wdata[12] top.tb_aspic.dut.gbi.wdata[11] top.tb_aspic.dut.gbi.wdata[10] top.tb_aspic.dut.gbi.wdata[9] top.tb_aspic.dut.gbi.wdata[8] top.tb_aspic.dut.gbi.wdata[7] top.tb_aspic.dut.gbi.wdata[6] top.tb_aspic.dut.gbi.wdata[5] top.tb_aspic.dut.gbi.wdata[4] top.tb_aspic.dut.gbi.wdata[3] top.tb_aspic.dut.gbi.wdata[2] top.tb_aspic.dut.gbi.wdata[1] top.tb_aspic.dut.gbi.wdata[0]
+@28
+#{top.tb_aspic.dut.gbi.config[6:0]} top.tb_aspic.dut.gbi.config[6] top.tb_aspic.dut.gbi.config[5] top.tb_aspic.dut.gbi.config[4] top.tb_aspic.dut.gbi.config[3] top.tb_aspic.dut.gbi.config[2] top.tb_aspic.dut.gbi.config[1] top.tb_aspic.dut.gbi.config[0]
+@200
+-gbo
+@28
+top.tb_aspic.dut.gbo.dev_select
+@22
+#{top.tb_aspic.dut.gbo.rdata[15:0]} top.tb_aspic.dut.gbo.rdata[15] top.tb_aspic.dut.gbo.rdata[14] top.tb_aspic.dut.gbo.rdata[13] top.tb_aspic.dut.gbo.rdata[12] top.tb_aspic.dut.gbo.rdata[11] top.tb_aspic.dut.gbo.rdata[10] top.tb_aspic.dut.gbo.rdata[9] top.tb_aspic.dut.gbo.rdata[8] top.tb_aspic.dut.gbo.rdata[7] top.tb_aspic.dut.gbo.rdata[6] top.tb_aspic.dut.gbo.rdata[5] top.tb_aspic.dut.gbo.rdata[4] top.tb_aspic.dut.gbo.rdata[3] top.tb_aspic.dut.gbo.rdata[2] top.tb_aspic.dut.gbo.rdata[1] top.tb_aspic.dut.gbo.rdata[0]
+@28
+top.tb_aspic.dut.gbo.interrupt
+top.tb_aspic.dut.gbo.config
+@200
+-SPI
+@28
+top.tb_aspic.dut.spio.clk
+top.tb_aspic.dut.spio.ss
+top.tb_aspic.dut.spio.mosi
+top.tb_aspic.dut.spii.miso
+@200
+-state
+-user
+@28
+top.tb_aspic.dut.r.user.status.tip
+top.tb_aspic.dut.r.user.status.tc
+top.tb_aspic.dut.r.user.ctrl.ss
+top.tb_aspic.dut.r.user.ctrl.tcim
+@22
+#{top.tb_aspic.dut.r.user.scaler.reload[15:0]} top.tb_aspic.dut.r.user.scaler.reload[15] top.tb_aspic.dut.r.user.scaler.reload[14] top.tb_aspic.dut.r.user.scaler.reload[13] top.tb_aspic.dut.r.user.scaler.reload[12] top.tb_aspic.dut.r.user.scaler.reload[11] top.tb_aspic.dut.r.user.scaler.reload[10] top.tb_aspic.dut.r.user.scaler.reload[9] top.tb_aspic.dut.r.user.scaler.reload[8] top.tb_aspic.dut.r.user.scaler.reload[7] top.tb_aspic.dut.r.user.scaler.reload[6] top.tb_aspic.dut.r.user.scaler.reload[5] top.tb_aspic.dut.r.user.scaler.reload[4] top.tb_aspic.dut.r.user.scaler.reload[3] top.tb_aspic.dut.r.user.scaler.reload[2] top.tb_aspic.dut.r.user.scaler.reload[1] top.tb_aspic.dut.r.user.scaler.reload[0]
+#{top.tb_aspic.dut.r.user.txdata.txdata[15:0]} top.tb_aspic.dut.r.user.txdata.txdata[15] top.tb_aspic.dut.r.user.txdata.txdata[14] top.tb_aspic.dut.r.user.txdata.txdata[13] top.tb_aspic.dut.r.user.txdata.txdata[12] top.tb_aspic.dut.r.user.txdata.txdata[11] top.tb_aspic.dut.r.user.txdata.txdata[10] top.tb_aspic.dut.r.user.txdata.txdata[9] top.tb_aspic.dut.r.user.txdata.txdata[8] top.tb_aspic.dut.r.user.txdata.txdata[7] top.tb_aspic.dut.r.user.txdata.txdata[6] top.tb_aspic.dut.r.user.txdata.txdata[5] top.tb_aspic.dut.r.user.txdata.txdata[4] top.tb_aspic.dut.r.user.txdata.txdata[3] top.tb_aspic.dut.r.user.txdata.txdata[2] top.tb_aspic.dut.r.user.txdata.txdata[1] top.tb_aspic.dut.r.user.txdata.txdata[0]
+#{top.tb_aspic.dut.r.user.rxdata.rxdata[15:0]} top.tb_aspic.dut.r.user.rxdata.rxdata[15] top.tb_aspic.dut.r.user.rxdata.rxdata[14] top.tb_aspic.dut.r.user.rxdata.rxdata[13] top.tb_aspic.dut.r.user.rxdata.rxdata[12] top.tb_aspic.dut.r.user.rxdata.rxdata[11] top.tb_aspic.dut.r.user.rxdata.rxdata[10] top.tb_aspic.dut.r.user.rxdata.rxdata[9] top.tb_aspic.dut.r.user.rxdata.rxdata[8] top.tb_aspic.dut.r.user.rxdata.rxdata[7] top.tb_aspic.dut.r.user.rxdata.rxdata[6] top.tb_aspic.dut.r.user.rxdata.rxdata[5] top.tb_aspic.dut.r.user.rxdata.rxdata[4] top.tb_aspic.dut.r.user.rxdata.rxdata[3] top.tb_aspic.dut.r.user.rxdata.rxdata[2] top.tb_aspic.dut.r.user.rxdata.rxdata[1] top.tb_aspic.dut.r.user.rxdata.rxdata[0]
+@200
+-internal
+@28
+top.tb_aspic.dut.r.shstate
+top.tb_aspic.dut.r.trig
+#{top.tb_aspic.dut.r.shreg[7:0]} top.tb_aspic.dut.r.shreg[7] top.tb_aspic.dut.r.shreg[6] top.tb_aspic.dut.r.shreg[5] top.tb_aspic.dut.r.shreg[4] top.tb_aspic.dut.r.shreg[3] top.tb_aspic.dut.r.shreg[2] top.tb_aspic.dut.r.shreg[1] top.tb_aspic.dut.r.shreg[0]
+#{top.tb_aspic.dut.r.bitcount[2:0]} top.tb_aspic.dut.r.bitcount[2] top.tb_aspic.dut.r.bitcount[1] top.tb_aspic.dut.r.bitcount[0]
+@22
+#{top.tb_aspic.dut.r.scount[12:0]} top.tb_aspic.dut.r.scount[12] top.tb_aspic.dut.r.scount[11] top.tb_aspic.dut.r.scount[10] top.tb_aspic.dut.r.scount[9] top.tb_aspic.dut.r.scount[8] top.tb_aspic.dut.r.scount[7] top.tb_aspic.dut.r.scount[6] top.tb_aspic.dut.r.scount[5] top.tb_aspic.dut.r.scount[4] top.tb_aspic.dut.r.scount[3] top.tb_aspic.dut.r.scount[2] top.tb_aspic.dut.r.scount[1] top.tb_aspic.dut.r.scount[0]
+@28
+#{top.tb_aspic.dut.miso_sync[1:0]} top.tb_aspic.dut.miso_sync[1] top.tb_aspic.dut.miso_sync[0]
+top.tb_aspic.dut.r.acstate
+@22
+#{top.tb_aspic.dut.rom_rdata[15:12]} top.tb_aspic.dut.rom_rdata[15] top.tb_aspic.dut.rom_rdata[14] top.tb_aspic.dut.rom_rdata[13] top.tb_aspic.dut.rom_rdata[12]
+@28
+top.tb_aspic.dut.addr_ac_me
+[pattern_trace] 1
+[pattern_trace] 0
