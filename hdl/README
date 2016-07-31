@@ -1,0 +1,21 @@
+Build greta HDL design:
+$ make
+
+Generate timing report
+$ make report
+
+To program FPGA with djtgcfg:
+$ make prog
+
+The following directories contain component implementation and test benches:
+- aspic/
+- bus_interface/
+- fast/
+- sdram/
+
+In the component directories, issue
+$ make simulation
+to simulate testbench and
+$ make waves
+to inspect simulation waveforms.
+

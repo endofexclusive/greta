@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2013 Martin Åberg
+# Copyright (C) 2013, 2016 Martin Åberg
 #
 # This program is free software: you can redistribute it
 # and/or modify it under the terms of the GNU General Public
@@ -16,18 +15,20 @@
 # You should have received a copy of the GNU General
 # Public License along with this program.  If not, see
 # <http://www.gnu.org/licenses/>.
-#
+
 TOP_LEVEL = greta
 PLATFORM = greta_board
 FPGA = xc3s50an-4-tqg144
 VHDLS = \
-  greta_pkg.vhdl \
+	greta_pkg.vhdl \
 	$(TOP_LEVEL).vhdl \
 	dcm_greta.vhdl \
-  bus_interface/bus_interface.vhdl \
-  fast/fast.vhdl \
-  disk/disk.vhdl \
-  sdram/sdram.vhdl
+	bus_interface/bus_interface.vhdl \
+	fast/fast.vhdl \
+	disk/disk.vhdl \
+	aspic/aspic.vhdl \
+	aspic/aspic_regs.vhdl \
+	sdram/sdram.vhdl
 
 all: $(TOP_LEVEL).bit
 
@@ -67,5 +68,10 @@ $(TOP_LEVEL).prj: $(VHDLS)
 
 .PHONY: clean
 clean:
-	rm -rf *.svf *.xsvf *.csvf _ngo *.bgn *.drc *.ncd *.ntrc_log *.prj *.twr *.csv *.html fx2fpga_xdb _xmsgs *.bit *.gise *.ngc *.pad *.ptwx *.twx *.ngm *.txt *.xml *.xrpt *.bld *.ise *.ngd *.par *.stx *.map *.twr auto_project_xdb *.cmd_log *.lso *.ngr *.pcf *.syr *.unroutes *.xpi *.mrp xst *.log *.cmd *.xwbt iseconfig xlnx_auto_0_xdb
+	rm -rf *.svf *.xsvf *.csvf _ngo *.bgn *.drc *.ncd *.ntrc_log *.prj *.twr
+	rm -rf *.csv *.html fx2fpga_xdb _xmsgs *.bit *.gise *.ngc *.pad *.ptwx *.twx
+	rm -rf *.ngm *.xml *.xrpt *.bld *.ise *.ngd *.par *.stx *.map *.twr
+	rm -rf auto_project_xdb *.cmd_log *.lso *.ngr *.pcf *.syr *.unroutes *.xpi
+	rm -rf *.mrp xst *.log *.cmd *.xwbt iseconfig xlnx_auto_0_xdb
+	rm -rf $(TOP_LEVEL)_pad.txt
 

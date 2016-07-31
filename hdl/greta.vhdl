@@ -1,5 +1,4 @@
---
--- Copyright (C) 2013 Martin Åberg
+-- Copyright (C) 2013, 2016 Martin Åberg
 --
 --  This program is free software: you can redistribute it
 --  and/or modify it under the terms of the GNU General Public
@@ -16,7 +15,7 @@
 --  You should have received a copy of the GNU General
 --  Public License along with this program.  If not, see
 --  <http://www.gnu.org/licenses/>.
---
+
 library ieee;
 use ieee.std_logic_1164.all;
 use work.greta_pkg.all;
@@ -118,20 +117,46 @@ architecture structural of greta is
 
   signal dev_select       : std_logic;
 
+  signal gbi        : gbus_in;
+  signal gbo_aspic  : gbus_out;
+
+  signal spii : spi_in;
+  signal spio : spi_out;
+
+  constant GSLAVE_FAST  : gslave := 0;
+  constant GSLAVE_DISK  : gslave := 1;
+  constant GSLAVE_ASPIC : gslave := 2;
+  constant GSLAVE_LAST  : gslave := GSLAVE_ASPIC;
 begin
 
   -- debug outputs
-  DEBUG_TX <= disk_config_out;
+  DEBUG_TX <= gbo_aspic.config;
 
-  dev_select <= fast_select or disk_select;
+  -- GRETA bus connections
+  dev_select <= fast_select or disk_select or gbo_aspic.dev_select;
   fast_config_in <= '1';
   disk_config_in <= fast_config_out;
-  rdata <= fast_rdata or disk_rdata;
+  gbi.config(GSLAVE_ASPIC) <= disk_config_out;
+
+  rdata <= fast_rdata or disk_rdata or gbo_aspic.rdata;
+
+  gbi.reset   <= cpu_reset;
+  gbi.req     <= req;
+  gbi.nwe     <= nwe;
+  gbi.addr    <= addr;
+  gbi.wdata   <= wdata;
+
+  SPI_CLK <= spio.clk;
+  SPI_nCS <= spio.ss;
+  SPI_DO <= spio.mosi;
+  spii.miso <= SPI_DI;
 
   -- Enable PLL.
   PHY_nRST <= '1';
   PHY_MDC <= 'Z';
   RMII_TX_EN <= '0';
+
+  RL_nINT2 <= not gbo_aspic.interrupt;
 
   -- Generate 133.3 MHz clock from 50 MHz PHY clock.
   dcm_0 : entity work.dcm_greta
@@ -182,7 +207,7 @@ begin
     RnW             => RL_RnW,
     CDAC            => RL_CDAC,
     nOVR            => RL_nOVR,
-    nINT2           => RL_nINT2,
+    nINT2           => open,
     nINT6           => RL_nINT6,
     nINT7           => RL_nINT7,
     nDTACK          => RL_nDTACK,
@@ -254,10 +279,26 @@ begin
     ram_ack     => sdram_disk_ack,
     ram_rdata   => sdram_rdata,
 
-    SPI_CLK     => SPI_CLK,
-    SPI_nCS     => SPI_nCS,
-    SPI_DO      => SPI_DO,
-    SPI_DI      => SPI_DI
+    SPI_CLK     => open,
+    SPI_nCS     => open,
+    SPI_DO      => open,
+    SPI_DI      => '0'
+  );
+
+  -- ASPIC - SPI controller for GRETA
+  aspic_0 : entity work.aspic
+  generic map(
+    gslave  => GSLAVE_ASPIC,
+    dwidth  => 8,
+    swidth  => 8,
+    sspol   => '0'
+  )
+  port map(
+    clk   => clk,
+    gbi   => gbi,
+    gbo   => gbo_aspic,
+    spii  => spii,
+    spio  => spio
   );
 
 end;
