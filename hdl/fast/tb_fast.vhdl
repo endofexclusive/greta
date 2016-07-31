@@ -39,6 +39,7 @@ architecture testbench of tb_fast is
   signal end_of_simulation : boolean := false;
   constant CLK_PERIOD : Delay_length := 7.5 ns;
 
+  constant GSLAVE_DUT : gslave := 0;
   constant DUTROM : expansionrom := (
     16#00# =>     (ERT_ZORROII or ERT_MEMLIST),
     16#01# =>     (ERT_CHAINEDCONFIG or ERT_MEMSIZE_8MB),
@@ -53,14 +54,15 @@ architecture testbench of tb_fast is
   );
 
 begin
-  dut : entity work.fast port map(
+  dut : entity work.fast
+  port map(
     clk             => clk,
     reset           => gbi.reset,
     req             => gbi.req,
     nwe             => gbi.nwe,
     addr            => gbi.addr,
     wdata           => gbi.wdata,
-    config_in       => gbi.config,
+    config_in       => gbi.config(GSLAVE_DUT),
     dev_select      => gbo.dev_select,
     rdata           => gbo.rdata,
     config_out      => gbo.config,
@@ -111,7 +113,7 @@ begin
     -- Assure that DUT doesn't set dev_select when unconfigured.
     assert_all_silent;
 
-    gbi.config <= '1';
+    gbi.config(GSLAVE_DUT) <= '1';
     -- Evaluate the UNCONFIGURED state when selected for configuraton.
     -- Area before AUTOCONFIG0
     gbus_silent(clk, gbi, gbo, 16#E7FFF0#, 16#E7FFFF#);
@@ -136,7 +138,7 @@ begin
 
     -- Configure device.
     gbus_reset(clk, gbi, gbo);
-    gbi.config <= '1';
+    gbi.config(GSLAVE_DUT) <= '1';
     assert gbo.config = '0';
     gbus_write(clk, gbi, gbo, x"E80048", x"abcd");
     assert gbo.config = '1';

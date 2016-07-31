@@ -53,6 +53,11 @@ package greta_pkg is
   constant WRITE_WORD   : bus_nwe := (UPPER => '0', LOWER => '0');
   constant READ_WORD    : bus_nwe := (UPPER => '1', LOWER => '1');
 
+  -- Maximum number of GRETA bus slaves supported
+  constant NGSLAVES     : natural := 7;
+  subtype gslave        is natural range 0 to NGSLAVES-1;
+  subtype config_vector is std_logic_vector(NGSLAVES-1 downto 0);
+
   -- GRETA bus protocol
   type gbus_in is record
     reset       : std_logic;
@@ -60,7 +65,8 @@ package greta_pkg is
     nwe         : bus_nwe;
     addr        : bus_addr;
     wdata       : bus_data;
-    config      : std_logic;
+    -- Active high AUTOCONFIG CONFIG_IN
+    config      : config_vector;
   end record;
   constant gbus_in_none : gbus_in := (
     reset       => '1',
@@ -68,12 +74,13 @@ package greta_pkg is
     nwe         => (others => 'U'),
     addr        => (others => 'U'),
     wdata       => (others => 'U'),
-    config      => '0'
+    config      => (others => '0')
   );
 
   type gbus_out is record
     dev_select  : std_logic;
     rdata       : bus_data;
+    interrupt   : std_logic;
     config      : std_logic;
   end record;
 
