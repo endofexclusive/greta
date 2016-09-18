@@ -25,7 +25,7 @@ regs:
     width:  16
     fields:
       - name:   ss
-        brief:  Slave select enable (RW)
+        brief:  Slave select (RW)
         pos:    0
 
       - name:   tcim

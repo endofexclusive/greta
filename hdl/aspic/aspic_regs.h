@@ -43,7 +43,7 @@ struct aspic_regs {
    *
    * Bit    | Name   | Description
    * ------ | ------ | ----------------------------------------
-   * 0      | ss     | Slave select enable (RW)
+   * 0      | ss     | Slave select (RW)
    * 1      | tcim   | Transfer complete interrupt mask (RW)
    */
   uint16_t ctrl;  /* 0x0004 */
@@ -88,7 +88,7 @@ struct aspic_regs {
 #define ASPIC_STATUS_TC 0x00000002
 
 /* Control register */
-/* Slave select enable (RW) */
+/* Slave select (RW) */
 #define ASPIC_CTRL_SS_BIT 0
 #define ASPIC_CTRL_SS 0x00000001
 /* Transfer complete interrupt mask (RW) */

@@ -132,6 +132,7 @@ begin
     variable slot : autoconfig_slot;
   begin
     gbus_reset(clk, gbi, gbo);
+    assert spio.ss = '0';
     -- Assure that DUT doesn't set dev_select when unconfigured.
     assert_all_silent;
 
@@ -180,16 +181,19 @@ begin
     gbus_read(clk, gbi, gbo, addr(slot, CTRL_OFFSET), d16, s);
     assert d16 = x"0003";
     assert gbo.interrupt = '0';
+    assert spio.ss = '1';
 
     gbus_write(clk, gbi, gbo, addr(slot, CTRL_OFFSET), x"0000");
     gbus_read(clk, gbi, gbo, addr(slot, CTRL_OFFSET), d16, s);
     assert d16 = x"0000";
     assert gbo.interrupt = '0';
+    assert spio.ss = '0';
 
     gbus_write(clk, gbi, gbo, addr(slot, CTRL_OFFSET), x"0003");
     gbus_read(clk, gbi, gbo, addr(slot, CTRL_OFFSET), d16, s);
     assert d16 = x"0003";
     assert gbo.interrupt = '0';
+    assert spio.ss = '1';
 
     -- Not all scaler bits can be set.
     gbus_write(clk, gbi, gbo, addr(slot, SCALER_OFFSET), x"ffff");
@@ -231,14 +235,21 @@ begin
     -- Mask interrupt
     gbus_write(clk, gbi, gbo, addr(slot, CTRL_OFFSET), x"0001");
     assert gbo.interrupt = '0';
+    assert spio.ss = '1';
     gbus_write(clk, gbi, gbo, addr(slot, CTRL_OFFSET), x"0003");
     assert gbo.interrupt = '1';
+    assert spio.ss = '1';
 
     -- Clear interrupt
     gbus_write(clk, gbi, gbo, addr(slot, STATUS_OFFSET), x"0002");
     assert gbo.interrupt = '0';
     gbus_read(clk, gbi, gbo, addr(slot, STATUS_OFFSET), d16, s);
     assert d16 = x"0000";
+
+    -- Deselect slave
+    gbus_write(clk, gbi, gbo, addr(slot, CTRL_OFFSET), x"0002");
+    assert gbo.interrupt = '0';
+    assert spio.ss = '0';
 
     end_of_simulation <= true;
     wait;

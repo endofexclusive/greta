@@ -29,7 +29,7 @@ package aspic_regs is
 
   -- Control register
   type ctrl_reg is record
-    -- Slave select enable (RW)
+    -- Slave select (RW)
     ss      : std_logic;
     -- Transfer complete interrupt mask (RW)
     tcim    : std_logic;

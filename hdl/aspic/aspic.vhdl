@@ -86,7 +86,9 @@ architecture rtl of aspic is
     v.dev_select      := '0';
     v.rdata           := (others => '0');
     v.user.cap.dma    := '0';
+    v.user.status.tip := '0';
     v.user.status.tc  := '0';
+    v.user.ctrl.ss    := '0';
     v.user.ctrl.tcim  := '0';
     v.shstate         := IDLE;
     v.trig            := '0';
@@ -130,6 +132,7 @@ begin
     v := r;
     v.trig := '0';
 
+    v.spio.ss := r.user.ctrl.ss xor ssinv;
     case r.shstate is
       when IDLE =>
         v.scount := unsigned('0' & r.user.scaler.reload(swidth-1 downto 0));
@@ -140,12 +143,10 @@ begin
         if r.user.status.tip = '1' then
           v.user.status.tc := '1';
         end if;
-        v.spio.ss := '0' xor ssinv;
         v.spio.clk := '0';
         if r.trig = '1' then
           v.shstate := TRANSFER;
           v.user.status.tip := '1';
-          v.spio.ss := r.user.ctrl.ss xor ssinv;
         end if;
 
       when TRANSFER =>
@@ -170,7 +171,6 @@ begin
             v.shstate := IDLE;
           end if;
         end if;
-
     end case;
 
     -- AUTOCONFIG state
