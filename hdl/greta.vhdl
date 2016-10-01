@@ -57,8 +57,8 @@ entity greta is
     --- SECURE DIGITAL (SPI)
     SPI_CLK         : out   std_logic;
     SPI_nCS         : out   std_logic;
-    SPI_DO          : out   std_logic;
-    SPI_DI          : in    std_logic;
+    SPI_DI          : out   std_logic;
+    SPI_DO          : in    std_logic;
 
     --- ETHERNET PHY (RMII)
     PHY_nRST        : out   std_logic;
@@ -148,8 +148,8 @@ begin
 
   SPI_CLK <= spio.clk;
   SPI_nCS <= spio.ss;
-  SPI_DO <= spio.mosi;
-  spii.miso <= SPI_DI;
+  SPI_DI <= spio.mosi;
+  spii.miso <= SPI_DO;
 
   -- Enable PLL.
   PHY_nRST <= '1';
