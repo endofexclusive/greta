@@ -259,6 +259,22 @@ of the GRETA hardware and HDL.
   Typesetting text documents.
 \end{description}
 
+\section{Errata}
+\subsection{Deassert Ethernet PHY reset to get system clock}
+The clock input to the FPGA is driven by a PLL in the Ethernet PHY.
+For the Ethernet PHY to output the clock to the FPGA, the PHY reset
+input must be asserted. The PHY reset input is driven by the FPGA
+output designated \texttt{PHY\_nRST}.
+
+\textbf{Workaround}: Always drive a high value on the FPGA output
+pin \texttt{PHY\_nRST}.
+
+\subsection{microSD pins are reversed}
+The pinout of the microSD socket does not match the PCB footprint.
+
+\textbf{Workaround}: Rotate the microSD connector $180^\circ$ or
+correct the footprint.
+
 \chapter{HDL Overview}
 This chapter gives an overview of the GRETA HDL architecture.
 All VHDL source files are included in appendix \ref{hdl_code}.
@@ -438,6 +454,7 @@ and is not even connected to the GRETA hardware.
 \texttt{addr}       & \texttt{bus\_addr}& out  & Word destination for read and write transfers \\ 
 \texttt{wdata}      & \texttt{bus\_data}& out  & WRITE data \\
 \texttt{rdata}      & \texttt{bus\_data}& in   & READ data \\
+\texttt{dev\_select}& \texttt{std\_logic}& in  & An on-board peripheral is selected \\
 \midrule
 \bottomrule
  \hline
